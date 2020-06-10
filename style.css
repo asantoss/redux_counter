@@ -1,0 +1,16 @@
+#counter {
+	width: 200px;
+	height: 50%;
+	margin: auto auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border: 5px solid pink;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 80vh;
+}
