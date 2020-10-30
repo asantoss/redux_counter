@@ -4,14 +4,12 @@ const initialState = {
 };
 
 function reducer(state = initialState, action) {
-	const stateCopy = Object.assign({}, state);
+	let { count } = state;
 	if (action.type === 'INCREMENT') {
-		stateCopy.count++;
-		return stateCopy;
+		return { count: count + 1 };
 	}
 	if (action.type === 'DECREMENT') {
-		stateCopy.count--;
-		return stateCopy;
+		return { count: count - 1 };
 	}
 	return state;
 }
@@ -25,6 +23,7 @@ function render() {
 	const countElement = document.getElementById('count');
 	countElement.innerHTML = state.count;
 }
+
 //We tell our store to run the render function we defined when the state changes.
 store.subscribe(render);
 
